@@ -1,0 +1,367 @@
+/* 	-------------------------------------------------
+	user.css for customizations
+	-------------------------------------------------
+	Use this file for adding custom CSS style.
+	These styles will override default theme styles.
+	You can enable/disable this CSS file inside
+	WordPress Appearance > Xing Options > General
+	-------------------------------------------------
+*/
+
+/*
+IMPORTANT: In the CSS heirarchy this file comes last; this means rules here WILL override rules in the responsive.css file. 
+Be sure to check how the changes respond / work at ALL breakpoints, then add rules to the device specific sections of this document as needed
+
+When Upgrading the Xing theme, save the user.css file somewhere before upgrading - restoring it after upgrade should put back most of the custom styles 
+(pending any element, class, ID or attribute changes in the theme itself)
+
+Contents: 
+1. General Changes (All Widths)
+2. Tablet Changes ( < 1000px)
+3. Mobile Changes ( >= 412px)
+4. Mobile Changes ( < 412px)
+*/
+
+/* General CSS Changes / Overrides  */
+#myaccount_uiBottom { margin-bottom: 20px; clear:both;}
+#sidebar ul a { color: #360;}
+ul.account-nav { color:#fff;}
+ul.account-nav li.welcome, ul.account-nav a { color:#fff;}
+ul.account-nav a:hover { color:#C4C4C4;}
+
+#account-bar .cart_status small {
+	display:none;
+}
+
+.product .woocommerce-price-suffix {
+	display: block;
+}
+
+.nav2 { width:auto;}
+
+.tight {margin-bottom: 0px}
+.boxed { padding: 4px;}
+.gray { background: #E5E5E5;}
+.green { background: #360; color: #FFF;}
+.forestGreen, .forestGreen:visited { background-color:#360;}
+.size-xl, .size-xl:visited { width:80%; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;}
+
+div#customer_registration {
+	margin-bottom: 20px;
+	}
+	
+.login-text {
+	padding: 0 10px;
+	text-align: justify;
+	}
+
+form .form-row.bclogin {
+	width:362px;
+	overflow:visible
+}
+
+form form-row-wide.bclogin {
+	width: 362px;
+	
+}
+
+form.bclogin {
+	padding: 0 10px;
+	background: #E5E5E5;
+	
+	}
+div.summary p.price span.amount {
+	color: #777777;
+	}	
+p.price span.price-disclaimer {
+	color: #777;
+	font-size: 12px;
+	font-weight: lighter;
+
+}
+
+#top-menu.ss_nav_top {
+	position: fixed; 
+	width: 100%; 
+	top: 0;
+}
+
+.admin-bar #top-menu.ss_nav_top{
+	top: 28px;
+}
+
+.gfield.hidden-total {
+	display: none!important;
+}
+
+ul.products li.product .onsale {
+	/*left: 3px;*/
+	font-size: 22px;
+	padding: 5px;
+	background: #D31818;
+}
+
+.products .product .wc-new-badge {
+	top: 3px;
+	right: 3px;
+	left: auto;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	line-height: 18px;
+	color: #fff;
+	font-size: 22px;
+	padding: 5px;
+	background: #D31818;
+}
+
+ul.products li.first.jcarousel-item {
+	clear: none;
+}
+
+#access {
+	width: 100%;
+}
+
+#access .wrap.clearfix {
+	width: 100%;
+}
+
+.nav1 li a {
+	padding: 10px 8px;
+}
+
+ul.products li.product h3 {
+	height: 36px;
+}
+
+h5.toggle, h5.handle {
+	background: #f7f7f7;
+}
+
+/* Honeypot fields on contact form page */
+
+#contactform {
+	overflow: hidden;
+}
+
+#contactform #lastnamefieldgroup,
+#contactform #subjectfieldgroup {
+	position: absolute;
+	left:-3000px;
+}
+
+/*#access ul li a {
+	padding: 10px 8px;
+}*/
+
+/* Adds dropdown arrow icons to menu items with arrow class in nav1 only */
+ul.nav1>li.menu-item.arrow a {
+	background-image: url(images/dropdown_arrow_nav1.png);
+	background-position: right; 
+	background-repeat: no-repeat;
+	padding-right: 36px; 
+}
+
+ul.nav1>li.menu-item.arrow:hover a {
+	background-image: url(images/dropdown_arrow_nav1_hover.png);
+	
+}
+
+ul.nav1>li.menu-item.arrow:active a {
+	background-image: url(images/dropdown_arrow_nav1_hover.png);
+	
+}
+
+ul.nav1>li.menu-item.current-menu-parent.arrow a {
+	background-image: url(images/dropdown_arrow_nav1_hover.png);
+}
+/* Stop Dropdown arrows cascading into sub-menu regardless of state */
+ul.nav1>li.menu-item.arrow ul.sub-menu li.menu-item a {
+	background-image: none;
+	padding-right: 0; 
+}
+
+ul.nav1>li.menu-item.arrow:hover ul.sub-menu li.menu-item a {
+	background-image: none;
+	padding-right: 0; 
+}
+
+ul.nav1>li.menu-item.arrow:active ul.sub-menu li.menu-item a {
+	background-image: none;
+	padding-right: 0; 
+}
+
+/* Hides the secondary top nav when on mobile devices */
+
+.ss_nav_top select {
+	display: none;
+}
+
+/* Custom Column Layouts (homepage)*/
+.four_fifth, .homepage_hero_main, .homepage_hero_sidebar, .full-width .threefifth_to_half, .full-width .twofifth_to_half, .full-width .threefifth_to_threefourth, .full-width .twofifth_to_onefourth { position:relative; overflow:hidden; float:left; margin-bottom:3px; margin-right:20px }
+.full-width .homepage_hero_main { width:764px;}
+.full-width .homepage_hero_sidebar { width: 176px; margin-right: 0; margin-bottom: 9px; border-top: 1px solid #e5e5e5;}
+.full-width .threefifth_to_half { width: 568px;}
+.full-width .twofifth_to_half { width: 372px; margin-right: 0;}
+.full-width .threefifth_to_threefourth { width: 568px;}
+.full-width .twofifth_to_onefourth { width: 372px; margin-right: 0;}
+
+form .details_billing .form-row-first,
+form .details_shipping .form-row-first,
+form .details_billing .form-row-last,
+form .details_shipping .form-row-last {
+	width: 100%;
+}
+
+#payment {
+	background: #ffffff;
+}
+
+#payment .about_paypal {
+	margin-left: 10px;
+	font-size: 1.2em;
+}
+
+#payment .payment_method_POLi a {
+	display: block;
+}
+
+#payment .payment_method_POLi a img {
+	margin-top: 15px;
+}
+
+.woocommerce_invalid input, 
+.woocommerce_validated input {
+	border-width: 3px;
+}
+
+.woocommerce_invalid {
+	background-color: rgba(255,0,0,0.05);
+}
+
+form .form-row.woocommerce-invalid .chzn-single, form .form-row.woocommerce-invalid .chzn-drop, form .form-row.woocommerce-invalid input.input-text, form .form-row.woocommerce-invalid select {
+	border-width: 3px;
+	border-color: #FD9EA5;
+}
+
+form .form-row.woocommerce-validated input.input-text {
+	border-width: 3px;
+	border-color: #A3DD7A;
+}
+
+.woocommerce-demo-store #top-menu.ss_nav_top {
+	top: 86px;
+}
+
+.woocommerce-demo-store #container {
+	margin-top: 106px;
+}
+
+.woocommerce-demo-store p.demo_store {
+	border: 1px solid #FF6100;
+	background: #FF6100;
+	box-shadow: none;
+	font-weight: bold;
+}
+@media only screen and (min-width: 407px) {
+	.woocommerce-demo-store #top-menu.ss_nav_top {
+	top: 68px;
+}
+
+.woocommerce-demo-store #container {
+	margin-top: 88px;
+}
+}
+@media only screen and (min-width: 607px) {
+	.woocommerce-demo-store #top-menu.ss_nav_top {
+	top: 50px;
+}
+
+.woocommerce-demo-store #container {
+	margin-top: 70px;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+	.woocommerce-demo-store #top-menu.ss_nav_top {
+	top: 32px;
+}
+
+.woocommerce-demo-store #container {
+	margin-top: 52px;
+}
+}
+
+/* 
+
+Custom Styles For Tablet Layout 
+
+*/
+
+@media only screen and (min-width: 740px) and (max-width: 999px) {
+	
+	form .form-row-first.bclogin, form .form-row-last.bclogin { width:240px; }
+	form .form-row.form-row-wide.bclogin { maxwidth: 100%; width:100%;}
+	.widget_product_search { margin-bottom: 16px;}
+	.hide-tablet-only { display:none;}
+	.full-width .four_fifth { width:556px;}
+	.full-width .homepage_hero_main { width:520px;}
+	.full-width .homepage_hero_sidebar { width: 160px; margin-bottom: 11px;}
+	.full-width .threefifth_to_half { width: 340px;}
+	.full-width .twofifth_to_half { width: 340px;}
+	.full-width .threefifth_to_threefourth { width: 520px;}
+	.full-width .twofifth_to_onefourth { width: 160px;}
+	.full-width .homepage_hero_sidebar img { height: 100px; width: 160px;}
+	.full-width div.homepage_hero_sidebar.hp_image_three { display: none;}
+	.header-widget-area { width: 300px;}
+}
+
+/*
+
+Custom Styles For Mobile Layout (412px + ) 
+
+*/
+
+@media only screen and (min-width: 412px) and (max-width: 739px) {
+
+form .form-row-first, form .form-row-last, form .form-row.bclogin, form form-row-wide.bclogin, .shipping_calculator .form-row-first, .shipping_calculator .form-row-last { width:100%; float:none; }
+
+div#customer_registration {
+	margin-bottom: 12px;
+	}
+
+.full-width .four_fifth, .full-width .homepage_hero_main, .full-width .threefifth_to_half, .full-width .twofifth_to_half, .full-width .threefifth_to_threefourth, .full-width .twofifth_to_onefourth { float:none; width:100%; margin-right:0 }
+.full-width .threefifth_to_half { margin-bottom: 15px;}
+
+.full-width .homepage_hero_sidebar { width: 176px; margin-right: 20px;}
+.full-width .homepage_hero_sidebar.hp_image_two { margin-right: 0;}
+.full-width div.homepage_hero_sidebar.hp_image_three { display: none;}
+}
+
+
+/* 
+
+Custom Styles For Mobile Layout (< 412px) 
+
+*/
+
+@media only screen and (max-width: 411px) {
+
+form .form-row-first, form .form-row-last, form .form-row.bclogin, form form-row-wide.bclogin, .shipping_calculator .form-row-first, .shipping_calculator .form-row-last { width:100%; float:none; }
+
+div#customer_registration {
+	margin-bottom: 10px;
+	}
+
+	.full-width .four_fifth, .full-width .homepage_hero_main, .full-width .homepage_hero_sidebar,  .full-width .threefifth_to_half, .full-width .twofifth_to_half, .full-width .threefifth_to_threefourth, .full-width .twofifth_to_onefourth { float:none; width:100%; margin-right:0  }
+
+	.full-width div.homepage_hero_sidebar.hp_image_three { display: none;}
+	.full-width .homepage_hero_sidebar, .full-width .homepage_hero_sidebar.hp_image_two { width: 176px; margin: 10px auto;}
+
+
+}
+

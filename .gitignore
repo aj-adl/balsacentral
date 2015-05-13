@@ -1,0 +1,84 @@
+########################################
+#                                      #
+# WordPress Stuff Yo                   #
+#                                      #
+########################################
+
+# Keep Local WP Configs out of the repo
+
+wp-config-*.php 
+!wp-config-sample.php
+!wp-config-local-sample.php
+
+# Log files (WordPress / WooCommerce )
+
+wc-logs/
+content/upload/wc-logs/
+
+# Uploads (synced outside of repo)
+
+content/uploads/
+content/uploads/minqueue-cache/
+content/uploads/wp-migrate-db/
+content/uploads/ithemes-security/
+content/uploads/js_composer/
+content/uploads/wc-logs/
+
+# Envato Backups 
+content/envato-backups/
+
+# Specific Plugins
+content/plugins/stream/
+
+# Folders in root space
+dev/
+img/
+downloads/
+test/
+
+########################################
+#                                      #
+# Server / System etc                  #
+#                                      #
+########################################
+
+# Mac Stuffs / iOS / Windows
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Editor files / config
+.idea
+*.sublime-project
+*.sublime-workspace
+
+# Dotfiles (server / sys)
+.revision
+.ftpquota
+.htaccesscopy
+
+# Log files (server / sys) 
+*.log
+error_log
+php_errorlog
+
+# Assorted Bullshit
+cgi-bin/
+a.php
+nope.php
+php.ini
+nope.txt
+balsa\ express\ long\ logo.png
+
+# File types we don't want
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.sql
+*.ai
+*.psd
