@@ -5,10 +5,13 @@
 ########################################
 
 # Keep Local WP Configs out of the repo
+# We allow the regular wp-config because
+# it's modified to not contain credentials
 
 wp-config-*.php 
 !wp-config-sample.php
 !wp-config-local-sample.php
+.app-config/
 
 # Log files (WordPress / WooCommerce )
 
