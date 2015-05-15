@@ -8,6 +8,8 @@
 # We allow the regular wp-config because
 # it's modified to not contain credentials
 
+.htaccess
+
 wp-config-*.php 
 !wp-config-sample.php
 !wp-config-local-sample.php
