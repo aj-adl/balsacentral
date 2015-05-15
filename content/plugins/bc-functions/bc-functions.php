@@ -94,3 +94,18 @@ function check_cart_min_value()
 }
 
 add_action( 'woocommerce_check_cart_items', 'check_cart_min_value');
+
+function bc_include_woothemes_updates ()
+{
+
+    if (defined('WP_CLI_INCLUDE_WOO') && WP_CLI_INCLUDE_WOO === 'true') {
+
+        require(WP_CONTENT_DIR . '/plugins/woothemes-updater/classes/class-woothemes-updater.php');
+
+        global $woothemes_updater;
+        $woothemes_updater = new WooThemes_Updater(WP_CONTENT_DIR . '/plugins/woothemes-updater/woothemes-updater.php', '1.5.5');
+
+    }
+}
+
+add_action('init', 'bc_include_woothemes_updates');

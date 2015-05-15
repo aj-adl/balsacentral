@@ -14,6 +14,8 @@ wp-config-*.php
 !wp-config-sample.php
 !wp-config-local-sample.php
 .app-config/
+content/plugins/woocommerce-min-max-quantities/
+
 
 # Log files (WordPress / WooCommerce )
 
