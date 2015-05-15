@@ -76,3 +76,21 @@ function deny_pobox_postcode( $posted ) {
 		$woocommerce->add_error( "Sorry, we are unable ship to PO BOX or Locked Bag addresses." );
 	}
 }
+
+function check_cart_min_value()
+{
+    $minimum_order_value = 30;
+
+    $cart_value  = WC()->cart->subtotal;
+
+
+    if ( $cart_value < $minimum_order_value ) {
+
+        wc_add_notice( sprintf( 'The minimum allowed order value is %s (excluding shipping) - please add some more items to your cart', wc_price( $minimum_order_value ) ), 'error');
+
+        return;
+
+    }
+}
+
+add_action( 'woocommerce_check_cart_items', 'check_cart_min_value');
