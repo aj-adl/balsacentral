@@ -13,5 +13,17 @@
  */
 define('WP_USE_THEMES', true);
 
+
+/**
+ * For if we've put WP in a sub dir
+ *
+ * Must have leading slash
+ *
+ * eg '/wp'
+ *
+ * @var $_app_path_to_core
+ */
+$_app_path_to_core = '';
+
 /** Loads the WordPress Environment and Template */
-require( dirname( __FILE__ ) . '/wp-blog-header.php' );
+require( dirname( __FILE__ ) . $_app_path_to_core . '/wp-blog-header.php' );
